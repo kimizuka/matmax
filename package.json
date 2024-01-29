@@ -1,0 +1,22 @@
+{
+  "name": "mattemax",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/kimizuka/mattemax.git",
+  "author": "kimizuka-fumitaka <f.kimizuka@gmail.com>",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "johnny-five": "^2.1.0",
+    "request": "^2.88.2",
+    "socket.io": "^4.7.4"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "yumake": "node yumake/app.js",
+    "update": "ncu -u"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^16.14.14"
+  }
+}

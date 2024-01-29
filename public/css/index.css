@@ -1,0 +1,329 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css";
+
+* {
+  margin: 0; padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+html {
+  font: 14px "Rounded Mplus 1c";
+}
+
+.wrapper {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background: #424242;
+}
+
+.view {
+  display: flex;
+  width: 100vw; height: calc(100vh - 33.33vw * 4);
+  font-size: 26px;
+  align-items: center;
+  justify-content: center;
+}
+
+.controller {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  overflow: hidden;
+}
+
+.box {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-index] {
+  width: calc(100% / 3);
+}
+
+[data-index]:before {
+  display: block;
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  border-radius: 0;
+  content: "";
+  pointer-events: none;
+  transition: border-radius .4s ease-in-out;
+}
+
+.box:after {
+  display: block;
+  padding-top: 100%;
+  content: "";
+  pointer-events: none;
+}
+
+.txt {
+  display: flex;
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: font-size .4s ease-in-out;
+}
+
+.ttl {
+  width: calc(200% / 3);
+  color: #F5F5F5;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ttl:after {
+  display: block;
+  padding-top: 50%;
+  content: "";
+}
+
+[data-index="0"] {
+  background: #7C4DFF;
+}
+
+[data-index="0"]:before {
+  background: #B388FF;
+}
+
+[data-index="1"] {
+  background: #E0E0E0;
+}
+
+[data-index="1"]:before {
+  background: #F5F5F5;
+}
+
+[data-index="2"] {
+  background: #80DEEA;
+}
+
+[data-index="2"]:before {
+  background: #E0F7FA;
+}
+
+[data-index="3"] {
+  background: #039BE5;
+}
+
+[data-index="3"]:before {
+  background: #29B6F6;
+}
+
+[data-index="4"] {
+  background: #00ACC1;
+}
+
+[data-index="4"]:before {
+  background: #26C6DA;
+}
+
+[data-index="5"] {
+  background: #80CBC4;
+}
+
+[data-index="5"]:before {
+  background: #E0F2F1;
+}
+
+[data-index="6"] {
+  background: #616161;
+}
+
+[data-index="6"]:before {
+  background: #9E9E9E;
+}
+
+[data-index="7"] {
+  background: #8D6E63;
+}
+
+[data-index="7"]:before {
+  background: #BCAAA4;
+}
+
+[data-index="8"] {
+  background: #FFAB91;
+}
+
+[data-index="8"]:before {
+  background: #FBE9E7;
+}
+
+[data-index="9"] {
+  background: #757575;
+}
+
+[data-index="9"]:before {
+  background: #BDBDBD;
+}
+
+[data-current-index="0"] .view:before {
+  color: #7C4DFF;
+  content: "毒沼っぽい踏み心地";
+}
+
+[data-current-index="0"] [data-index="0"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="0"] [data-index="0"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="1"] .view:before {
+  color: #F5F5F5;
+  content: "新雪っぽい踏み心地";
+}
+
+[data-current-index="1"] [data-index="1"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="1"] [data-index="1"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="2"] .view:before {
+  color: #E0F7FA;
+  content: "みぞれっぽい踏み心地";
+}
+
+[data-current-index="2"] [data-index="2"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="2"] [data-index="2"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="3"] .view:before {
+  color: #29B6F6;
+  content: "水たまりっぽい踏み心地";
+}
+
+[data-current-index="3"] [data-index="3"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="3"] [data-index="3"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="4"] .view:before {
+  color: #26C6DA;
+  content: "浅瀬っぽい踏み心地";
+}
+
+[data-current-index="4"] [data-index="4"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="4"] [data-index="4"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="5"] .view:before {
+  color: #E0F2F1;
+  content: "ガラスっぽい踏み心地";
+}
+
+[data-current-index="5"] [data-index="5"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="5"] [data-index="5"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="6"] .view:before {
+  color: #9E9E9E;
+  content: "アスファルトっぽい踏み心地";
+}
+
+[data-current-index="6"] [data-index="6"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="6"] [data-index="6"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="7"] .view:before {
+  color: #BCAAA4;
+  content: "落ち葉っぽい踏み心地";
+}
+
+[data-current-index="7"] [data-index="7"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="7"] [data-index="7"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="8"] .view:before {
+  color: #FBE9E7;
+  content: "はだしっぽい踏み心地";
+}
+
+[data-current-index="8"] [data-index="8"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="8"] [data-index="8"] .txt {
+  font-size: 18px;
+}
+
+[data-current-index="9"] .view:before {
+  color: #BDBDBD;
+  content: "砂利っぽい踏み心地";
+}
+
+[data-current-index="9"] [data-index="9"]:before {
+  border-radius: 50%;
+  animation: select .8s .2s ease-in-out infinite;
+}
+
+[data-current-index="9"] [data-index="9"] .txt {
+  font-size: 18px;
+}
+
+@keyframes select {
+  0% {
+    transform: scale(.9);
+  }
+
+  30% {
+    transform: scale(.8);
+  }
+
+  50% {
+    transform: scale(.95);
+  }
+
+  70% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(.9);
+  }
+}
